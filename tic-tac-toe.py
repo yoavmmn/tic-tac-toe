@@ -7,6 +7,14 @@ board = [
   [None, None, None]
 ]
 
+def switchPlayer():
+  global current_player
+
+  if current_player == 'X':
+    current_player = 'O'
+  else:
+    current_player = 'X'
+
 def printBoard(board):
   for row in board:
     print('%s | %s | %s' % (row[0] or ' ', row[1] or ' ', row[2] or ' '))
@@ -82,10 +90,7 @@ def main():
       print('The game ended, it\'s a tie :(')
       return
 
-    if current_player == 'X':
-      current_player = 'O'
-    else:
-      current_player = 'X'
+    switchPlayer()
 
 
 if __name__ == '__main__':
