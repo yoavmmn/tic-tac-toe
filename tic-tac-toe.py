@@ -7,6 +7,11 @@ board = [
   [None, None, None]
 ]
 
+def switchPlayer():
+  '''
+    This function switch the player from X to O and from O to X
+  '''
+
 def printBoard(board):
   '''
     This function prints the board in a nice format
